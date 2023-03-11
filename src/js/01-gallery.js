@@ -17,13 +17,8 @@ const imagesBlock = galleryItems.map(({ preview, original, description }) => {
 
 galleryImg.insertAdjacentHTML("beforeend", imagesBlock);
 
-galleryImg.addEventListener('click', handleClick);
-
-function handleClick (event){
-  event.preventDefault();
-  new SimpleLightbox('.gallery a', {captions: true,
+new SimpleLightbox('.gallery a', {captions: true,
     captionSelector: 'img',
     captionsData: 'alt',
     captionPosition: 'bottom',
-    captionDelay: 250});
-} 
+    captionDelay: 250})
